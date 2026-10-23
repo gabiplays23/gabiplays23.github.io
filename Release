@@ -1,7 +1,7 @@
 Architectures: iphoneos-arm64e iphoneos-arm64 iphoneos-arm
 Codename: gabiplays23
 Components: main
-Date: Sun, 11 Oct 2026 19:35:18 +0000
+Date: Fri, 23 Oct 2026 19:24:32 +0000
 Description: Rugmj's Repo
 Label: gabiplays23's Repo
 Origin: gabiplays23's Repo
@@ -10,28 +10,28 @@ Version: 1.0
 MD5Sum:
  12665a6888d22712f2977d85aba87541              791 Packages
  62bc78fdde60b1df98a20b1a5fd99623              577 Packages.bz2
- df5692e37ef72579bbb8213e200f88be              534 Packages.gz
+ 1f6cac1baba727231df4b880a95970e5              534 Packages.gz
  8bdff57b37bc0ee68c70c6b7756b014c              600 Packages.xz
  5bcf1ca764fcc8611b66c5b614b3e76a              534 Packages.zst
- 70060bce4b78ea9f02e475f819375db1              242 Release
+ d860f15c056baaefe7e2e3347d4d9be8              242 Release
 SHA1:
  faa846ff50968d121186a8e4dd6eb0ca919915ea              791 Packages
  8d11832abc78d09874bf712e55feb44dfda9310d              577 Packages.bz2
- 46469c95d9e8648493484707e3b6af984d37de89              534 Packages.gz
+ ed5460cf38d302ec6d797bfdaf99db97d006b8f3              534 Packages.gz
  3b337187908af9d40cd50c479e859ccb8d7e0bc2              600 Packages.xz
  873a9f6cfb2eb9651b62c8540d803d0b5d6387ee              534 Packages.zst
- c8dfa8f08c4dff8ae2e47fe6ef514e914aa3d103              242 Release
+ 0cd077d9dcd65f3305f769d3b93637d8da76435b              242 Release
 SHA256:
  4bcaf1d8d94060098d1fb777662c20beebdea90369cedacf4fdd9570a8e0c4d3              791 Packages
  34f68082e0b8d487f8563471e2594e6f1198a0bbfcb42eafd0d9f2603a2b975c              577 Packages.bz2
- e57928177786499d4985ba5ac58df534fb95c879bfa79451dc7b8a1ea5476eef              534 Packages.gz
+ a348ef3848837625b265e9907043300b218b7b6d204b7505baf5e7aea0ef175f              534 Packages.gz
  de5670a5d0a528a4abd0a585db438afa5f538651dfe8c3a70bcb1e75053fc71c              600 Packages.xz
  e062c135bcc6aa762b6e393657f26d3322dbd308a0c19bdebeb91f31b93fa8fa              534 Packages.zst
- 6bb984eaf08ef7d6a053380b157c6355385d536b0823a849da50ad49a018b926              242 Release
+ eca29915a3635dd27e99ae3d1338b1a0ee14dc6e6132f85710571da6e725f0a6              242 Release
 SHA512:
  4e4f0f6eacd4a1892eae696922b74a3a5596a03d35e3ddc44675d5f78b9fc6c8a0a897f5ad86ba3a5246cb06f4f653028a9519c61b796b3585697e8dc002e627              791 Packages
  6fdab899fe6b029501692b5bc85c735b18e7e55ea8072632039b10898c9843420789c092532de316a2e26faa181bd520a39cdf12ab924ea880b0e76b7de91952              577 Packages.bz2
- 17e5334680ff8f9841300ba73c5221ff74a2dc02569784103a8746f472a6c2ee20496b1259ce9aeac8f6734c13c7ead20cd0c821746d0ceadcbc8456a99843a1              534 Packages.gz
+ 05ea5b713aa2d412dbf0b958b1c7afa1881c9765b94a280c3ce644cd13eb853eff34ee894e1d2c2395f383d8583bcc1f12694beded10bd871a3a8c879a6a90e3              534 Packages.gz
  cd799eef8ad9625511b516c766ad12f773a161beba34322cbdffa114a0756614d918101cc230fc5a1c670dd993f45e51e462d774d4945d201f6197847072f9eb              600 Packages.xz
  98a2dc74e825bf782863b74f3f1ca74202158db0a4f63544a30328259474ba93038b2e7cfc9d4547e758dc7b1482db83a36118be002e17531c943f185e423e3d              534 Packages.zst
- b24e1baee6a8fa141ae429e024da9e98eb8e06b3b9547c92c4050fce081a68ec2ede74a673bedf37fffab0f25af3eaf40f6f3f3d7726eb60ce9888f9e14ca9d8              242 Release
+ ca44358e67dd5503be1077996e1baffac1836289942dd78ddc1966767145f2b6b1e5b122cd97abdfed2261541eebea836963d0d7ae9e4f6f8c47a9b5402118e3              242 Release
