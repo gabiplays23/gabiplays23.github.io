@@ -1,0 +1,67 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://raw.githubusercontent.com/gabiplays23/gabiplays23.github.io/main/RepoIcon.png",
+  "tintColor": "#27c2ff",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "accessibilityText": "Orion package preview",
+              "url": "https://raw.githubusercontent.com/gabiplays23/gabiplays23.github.io/main/depictions/dev.theos.orion14/screenshots/preview-1.svg"
+            },
+            {
+              "accessibilityText": "Orion compatibility screenshot",
+              "url": "https://raw.githubusercontent.com/gabiplays23/gabiplays23.github.io/main/depictions/dev.theos.orion14/screenshots/preview-2.svg"
+            }
+          ]
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Orion (iOS 14-18)",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Runtime for tweaks built using Orion and Swift.\n\nThis package provides the required runtime for tweaks compiled with the Orion toolchain and is intended for compatibility across iOS 14 through 18."
+        },
+        {
+          "class": "DepictionSpacerView",
+          "spacing": 12
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "Theos Team"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.3"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Compatibility",
+          "text": "iOS 14-18"
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## 1.0.3\n- Updated runtime packaging for current iOS compatibility\n- Improved stability for Orion-based tweaks\n- General maintenance and compatibility fixes\n\n## 1.0.2\n- Initial public release"
+        }
+      ]
+    }
+  ]
+}

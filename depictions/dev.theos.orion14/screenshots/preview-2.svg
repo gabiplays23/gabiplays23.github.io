@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg2)"/>
+  <rect x="170" y="110" width="940" height="500" rx="28" fill="#0f172a" stroke="#334155"/>
+  <rect x="260" y="170" width="760" height="82" rx="18" fill="#111827" stroke="#475569"/>
+  <text x="320" y="220" fill="#f8fafc" font-size="42" font-family="Arial, sans-serif" font-weight="700">Orion Runtime</text>
+  <rect x="260" y="290" width="760" height="200" rx="18" fill="#1e293b"/>
+  <circle cx="370" cy="410" r="56" fill="#22d3ee" opacity="0.9"/>
+  <path d="M338 410l22 22 42-42" stroke="#ecfeff" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="470" y="390" fill="#f8fafc" font-size="40" font-family="Arial, sans-serif" font-weight="700">Stable and lightweight</text>
+  <text x="470" y="440" fill="#cbd5e1" font-size="26" font-family="Arial, sans-serif">Built for tweak compatibility on newer iOS versions</text>
+  <text x="470" y="480" fill="#94a3b8" font-size="22" font-family="Arial, sans-serif">Fast setup • Secure runtime • Developer focused</text>
+</svg>
