@@ -30,22 +30,28 @@ h2 {
 menu {
 	list-style-type: none;
 	padding: 0;
+	margin: 0 auto;
+	max-width: 280px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 menu li {
-	margin-bottom: 2vw;
+	width: 100%;
+	margin: 0;
 }
 
 menu li a {
-	display: inline-block;
-	padding: 2vw 4vw;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 1.1rem 1rem;
 
 	background-color: #333;
 	color: white;
 	text-decoration: none;
 	border-radius: 1vw;
-
-	width: 5vw;
 
 	text-align: center;
 }
