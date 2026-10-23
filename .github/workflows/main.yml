@@ -1,0 +1,116 @@
+name: Update Debian Repo
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install repo tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg-dev bzip2 gzip xz-utils zstd
+
+      - name: Regenerate Debian repo metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p debians
+
+          if ls debians/*.deb >/dev/null 2>&1; then
+            dpkg-scanpackages -m debians /dev/null > Packages
+          else
+            : > Packages
+          fi
+
+          gzip -9c Packages > Packages.gz
+          bzip2 -9kc Packages > Packages.bz2
+          xz -9 -c Packages > Packages.xz
+          zstd -q -19 -c Packages > Packages.zst
+
+          python3 - <<'PY'
+          import hashlib, os
+          from datetime import datetime, timezone
+
+          files = [
+              "Packages",
+              "Packages.bz2",
+              "Packages.gz",
+              "Packages.xz",
+              "Packages.zst",
+          ]
+
+          def sha(path, algo):
+              h = hashlib.new(algo)
+              with open(path, "rb") as f:
+                  for chunk in iter(lambda: f.read(65536), b""):
+                      h.update(chunk)
+              return h.hexdigest()
+
+          def line_for(algo, fn):
+              digest = sha(fn, algo)
+              size = os.path.getsize(fn)
+              return f" {digest}              {size} {fn}"
+
+          date = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
+
+          out = [
+              "Origin: gabiplays23's Repo",
+              "Label: gabiplays23's Repo",
+              "Suite: stable",
+              "Codename: gabiplays23",
+              "Architectures: iphoneos-arm64e iphoneos-arm64 iphoneos-arm",
+              "Components: main",
+              "Description: gabiplays23's Repo",
+              "Date: " + date,
+              "MD5Sum:",
+          ]
+
+          for fn in files:
+              out.append(line_for("md5", fn))
+
+          out.append("SHA1:")
+          for fn in files:
+              out.append(line_for("sha1", fn))
+
+          out.append("SHA256:")
+          for fn in files:
+              out.append(line_for("sha256", fn))
+
+          out.append("SHA512:")
+          for fn in files:
+              out.append(line_for("sha512", fn))
+
+          with open("Release", "w", encoding="utf-8") as f:
+              f.write("\n".join(out) + "\n")
+          PY
+
+      - name: Commit generated repo files
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add Packages Packages.gz Packages.bz2 Packages.xz Packages.zst Release
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Regenerate Debian repo metadata"
+            git push
+          fi
