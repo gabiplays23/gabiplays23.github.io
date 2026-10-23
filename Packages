@@ -16,4 +16,6 @@ Description: Runtime for tweaks built using Orion and Swift
 Tag: role::developer
 Name: Orion (iOS 14-18)
 Author: Theos Team <theos@kabiroberai.com>
+Depiction: https://gabiplays23.github.io/depictions/dev.theos.orion14/depiction.json
+Icon: https://gabiplays23.github.io/RepoIcon.png
 
